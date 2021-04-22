@@ -225,7 +225,8 @@
                             </ul>
                         </div>
                     </div>
-                </div>    <div class="app-main__outer">
+                </div>    
+                <div class="app-main__outer">
                     <div class="app-main__inner">
                         <div class="app-page-title">
                             <div class="page-title-wrapper">
@@ -240,47 +241,64 @@
                                     </div>
                                 </div>
                             </div>
-                        </div>            
+                        </div> 
+                    </div>      
+                </div>
+
                         <!-- Make components in here -->
 
-                        <div class="card-body gioithieu-amdau">
-                            <p style="font-size: 20px; text-align: center; font-weight: 700;">Quy định bàn phím</p>
-                            
-                            <p>Bàn phím gõ tốc ký tiếng Việt gồm 22 phím + 1 phím dài <br> • 4 phím đặc biệt (S, T, H, N), nhãn trùng nhau nhưng vai trò khác nhau <br> • 1 phím dài để chuyển chế độ gõ số </p>
-                            
-                            <div class="text-center">
-                                <img class="img-fluid px-3 px-sm-4 mt-3 mb-4" style="width: 400px;" src="./../images/lamquenbp1-removebg-preview.png" alt="">
+                        <div class="modal fade show" id="modalFinishLearn" aria-modal="true" role="dialog" style="display: block;">
+                            <div class="modal-dialog modal-dialog-centered modal-md">
+                                <div class="modal-content">
+                                    <div style="margin-bottom: -0.5rem!important;" class="card shadow mb-4 border-top-primary">
+                                        <div style="display: flex; justify-content:center" class="card-header py-3">
+                                            <h6 class="m-0 font-weight-bold text-primary"> Bạn đã hoàn thành bài học</h6>
+                                        </div>
+                                        <div class="card-body">
+                                            <div class="">
+                                                <div>
+                                                    <table style="width: 80%; margin: auto;" id="table-tailieu" class="table table-bordered table-striped">
+                                                        <thead style="text-align: center; background-color: #1cc88a;" class="badge-info">
+                                                            <tr>
+                                                                <th>Tiêu chí</th>
+                                                                <th>Kết quả</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody style="text-align: center;">
+                                                            <tr>
+                                                                <td>Tổng số âm đầu</td>
+                                                                <td>7</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>Gõ đúng</td>
+                                                                <td>6</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>Gõ sai</td>
+                                                                <td>1</td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                    <div style="text-align: center; padding: 10px;">
+                                                        <i style="font-size: 30px; color: #F8FF02;" class="fas fa-star"></i>
+                                                        <i style="font-size: 40px; color: #F8FF02;" class="fas fa-star"></i>
+                                                        <i style="font-size: 30px; color: #d1d3e2;" class="fas fa-star"></i>
+                    
+                                                    </div>
+                                                    <h6 style="text-align: center;" class="m-0 font-weight-bold text-primary">Bạn nhận được 2/3 sao cho bài học này!</h6>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                    
+                                    <!-- Modal footer -->
+                                    <div class="modal-footer">
+                                        <button onclick="window.location.href='learn_typing.html';" type="button" class="btn btn-primary">Học lại</button>
+                                        <button type="button" class="btn btn-secondary" id="closeBtn" data-dismiss="modal">Close</button>
+                                    </div>
+                    
+                                </div>
                             </div>
-
-                            <p>• Bàn phím gõ tốc ký tiếng Việt được ánh xạ lên bàn phím Qwerty gồm 24 phím. <br> • Dải số từ 1-0 tương ứng với thanh số trên bàn phím gõ tốc ký tiếng Việt</p>
-                            
-                            <div class="text-center">
-                                <img class="img-fluid px-3 px-sm-4 mt-3 mb-4" style="width: 600px;" src="./../images/lamquenbp2-removebg-preview.png" alt="">
-                            </div>
-
-                            <p style="font-size: 20px; text-align: center; font-weight: 700;">Cách đặt ngón tay</p>
-                            
-                            <p style="font-size: 15px; font-weight: 700;">1. Cách đặt ngón tay trong trường hợp gõ từ</p>
-                            
-                            <div class="text-center">
-                                <img class="img-fluid px-3 px-sm-4 mt-3 mb-4" style="width: 600px;" src="./../images/lamquenbp3-removebg-preview.png" alt="">
-                            </div>
-                            
-                            <p style="font-size: 15px; font-weight: 700;">2. Cách đặt ngón tay trong trường hợp gõ số</p>
-                            
-                            <div class="text-center">
-                                <img class="img-fluid px-3 px-sm-4 mt-3 mb-4" style="width: 600px;" src="./../images/lamquenbp4-removebg-preview.png" alt="">
-                            </div>
-                            
-                            <p style="font-size: 15px; font-weight: 700;">3. Trật tự của bàn phím gõ tốc ký</p>
-                            
-                            <div class="text-center">
-                                <img class="img-fluid px-3 px-sm-4 mt-3 mb-4" style="width: 500px;" src="./../images/lamquenbp5-removebg-preview.png" alt="">
-                            </div>
-                            
-                            <p>• Trật tự của bàn phím theo chiều mũi tên (S T K P R H N H S * I U O E A W Y J N G T K), từ trái qua phải, từ trên xuống dưới. <br>• Bất cứ tổ hợp phím nào phù hợp với trật tự này thì đều có thể gõ trong một lượt nhấn.
-                                <br> • Việc ghi nhớ trật tự các phím là rất quan trọng vì bàn phím gõ tốc ký tiếng Việt gồm nhiều phím trùng nhau, tuy nhiên mỗi vị trí lại có chức năng khác nhau.</p>
-
                         </div>
 
                         <!-- Make components in here -->
@@ -305,5 +323,19 @@
                 </div>
         </div>
     </div>
-<script type="text/javascript" src="./../assets/scripts/main.js"></script></body>
+
+<script >
+
+var modal = document.getElementById("modalFinishLearn");
+
+var closebtn = document.getElementById("closeBtn");
+
+closebtn.onclick = function() {
+    modal.style.display = "none";
+}
+
+</script>
+
+    <script type="text/javascript" src="./../assets/scripts/main.js"></script></body>
+
 </html>
