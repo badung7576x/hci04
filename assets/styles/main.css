@@ -6912,6 +6912,10 @@ a.close.disabled {
 	background-color: #3f6ad8 !important
 }
 
+.bg-miss {
+	background-color: #fd0000 !important
+}
+
 a.bg-primary:hover,
 a.bg-primary:focus,
 button.bg-primary:hover,
