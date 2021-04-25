@@ -28329,24 +28329,25 @@
           }]
       }, {
           type: "radar",
+          responsive: true,
           data: {
               labels: [
-                  ["Eating", "Dinner"],
-                  ["Drinking", "Water"], "Sleeping", ["Designing", "Graphics"], "Coding", "Cycling", "Running"
+                  "Âm đầu", "Âm giữa", "Âm cuối", "Gõ từ", "Gõ câu"
               ],
               datasets: [{
-                  label: "My First dataset",
+                  label: "Học gõ",
                   backgroundColor: o(window.chartColors.red).alpha(.2).rgbString(),
                   borderColor: window.chartColors.red,
                   pointBackgroundColor: window.chartColors.red,
-                  data: [a(), a(), a(), a(), a(), a(), a()]
-              }, {
-                  label: "My Second dataset",
-                  backgroundColor: o(window.chartColors.blue).alpha(.2).rgbString(),
-                  borderColor: window.chartColors.blue,
-                  pointBackgroundColor: window.chartColors.blue,
-                  data: [a(), a(), a(), a(), a(), a(), a()]
-              }]
+                  data: [43, 54, 27, 33, 25]
+              },
+              {
+                label: "Luyện tập",
+                backgroundColor: o(window.chartColors.blue).alpha(.2).rgbString(),
+                borderColor: window.chartColors.blue,
+                pointBackgroundColor: window.chartColors.blue,
+                data: [55, 49, 50, 35, 40]
+            }]
           },
           options: {
               legend: {
@@ -28354,7 +28355,7 @@
               },
               title: {
                   display: !1,
-                  text: "Chart.js Radar Chart"
+                  text: "Học gõ và luyện tập"
               },
               scale: {
                   ticks: {
@@ -28447,22 +28448,25 @@
       p = {
           type: "line",
           data: {
-              labels: ["January", "February", "March", "April", "May", "June", "July"],
+              labels: ["25/4", "26/4", "27/4", "28/4", "29/4", "30/4", "30/4", "1/5", "2/5"],
               datasets: [{
-                  label: "My First dataset",
+                  label: "Thời gian học gõ (h)",
                   backgroundColor: window.chartColors.red,
                   borderColor: window.chartColors.red,
-                  data: [a(), a(), a(), a(), a(), a(), a()],
-                  fill: !1
-              }, {
-                  label: "My Second dataset",
+                  data: [1.5, 1, 0.5, 2, 1.3, 1.1, 0.8, 0.4, 1],
                   fill: !1,
-                  backgroundColor: window.chartColors.blue,
-                  borderColor: window.chartColors.blue,
-                  data: [a(), a(), a(), a(), a(), a(), a()]
+                  yAxisID: 'h',
+              }, {
+                  label: "Tốc độ gõ (wps)",
+                  fill: !1,
+                  backgroundColor: window.chartColors.green,
+                  borderColor: window.chartColors.green,
+                  data: [120, 140, 150, 160, 155, 155, 168, 170, 180],
+                  yAxisID: 'wps',
               }]
           },
           options: {
+              stacked: false,
               responsive: !0,
               maintainAspectRatio: !1,
               title: {
@@ -28470,7 +28474,7 @@
                   text: "Chart.js Line Chart"
               },
               legend: {
-                  display: !1
+                  display: !0
               },
               layout: {
                   padding: {
@@ -28491,21 +28495,45 @@
               pointBackgroundColor: "#fff",
               pointBorderColor: window.chartColors.blue,
               pointBorderWidth: "2",
-              scales: {
-                  xAxes: [{
-                      display: !1,
-                      scaleLabel: {
-                          display: !0,
-                          labelString: "Month"
-                      }
-                  }],
-                  yAxes: [{
-                      display: !1,
-                      scaleLabel: {
-                          display: !0,
-                          labelString: "Value"
-                      }
-                  }]
+              scales:{
+                xAxes: [{
+                    display: !0,
+                    scaleLabel: {
+                        display: !0,
+                        labelString: "Ngày"
+                    }
+                }],
+                yAxes: [
+                    {
+                        id: "wps",
+                        display: !0,
+                        scaleLabel: {
+                            display: !0,
+                            labelString: "Tốc độ gõ (wps)"
+                        },
+                        position: 'left',
+                        ticks: {
+                            max: 200,
+                            min: 0
+                        }
+                    },
+                    {
+                        id: "h",
+                        display: !0,
+                        scaleLabel: {
+                            display: !0,
+                            labelString: "Thời gian học gõ (h)"
+                        },
+                        position: 'right',
+                        grid: {
+                            drawOnChartArea: false, // only want the grid lines for one axis to show up
+                        },
+                        ticks: {
+                            max: 6,
+                            min: 0
+                        }
+                    }
+                ]
               }
           }
       },
