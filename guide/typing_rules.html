@@ -99,17 +99,6 @@
                 </div>
             </div>
         </div>
-        <!-- <div class="ui-theme-settings">
-            <button type="button" id="TooltipDemo" class="btn-open-options btn btn-warning">
-                <i class="fa pe-7s-config fa-w-16 fa-spin fa-2x"></i>
-            </button>
-            <div class="theme-settings__inner">
-                <div class="scrollbar-container">
-                    <div class="theme-settings__options-wrapper">
-                    </div>
-                </div>
-            </div>
-        </div> -->
         <div class="app-main">
             <div class="app-sidebar sidebar-shadow">
                 <div class="app-header__logo">
@@ -249,53 +238,45 @@
                         </div>
                     </div>
                     <!-- Make components in here -->
-                    <div class="row">
-                        <div class="col-4">
+                    <div class="row mb-2">
+                        <div class="col-3">
                             <div class="list-group" id="list-tab" role="tablist">
-                                <a href="#first-rule" id="first-item" data-toggle="list" role="tab" class="list-group-item list-group-item-action active" aria-controls="first-item">
-                                Quy tắc gõ từ đơn
-                                </a>
-                                <a href="#second-rule" id="second-item" data-toggle="list" role="tab" class="list-group-item list-group-item-action" aria-controls="second-item">
-                                    Quy tắc gõ âm đầu
-                                </a>
-                                <a href="#third-rule" id="third-item" data-toggle="list" role="tab" class="list-group-item list-group-item-action" aria-controls="third-item">
-                                    Quy tắc gõ âm chính
-                                </a>
-                                <a href="#fourth-rule" id="fourth-item" data-toggle="list" role="tab" class="list-group-item list-group-item-action" aria-controls="fourth-item">Quy tắc gõ âm cuối</a>
-                                <a href="#fifth-rule" id="fifth-item" data-toggle="list" role="tab" class="list-group-item list-group-item-action" aria-controls="fifth-item">Quy tắc gõ số</a>
-                                <a href="#sixth-rule" id="sixth-item" data-toggle="list" role="tab" class="list-group-item list-group-item-action" aria-controls="sixth-item">Quy tắc xóa</a>
-                                <a href="#seventh-rule" id="seventh-item" data-toggle="list" role="tab" class="list-group-item list-group-item-action" aria-controls="seventh-item">Từ điển cá nhân</a>
+                                <a href="#first-rule" id="first-item" data-toggle="list" 
+                                    role="tab" class="list-group-item list-group-item-action active" 
+                                    aria-controls="first-item"
+                                    onclick="changePdfSource('../assets/shorthand_document-15-17.pdf#toolbar=0&zoom=50')">Quy tắc gõ từ đơn</a>
+                                <a href="#second-rule" id="second-item" data-toggle="list" 
+                                    role="tab" class="list-group-item list-group-item-action" 
+                                    aria-controls="second-item"
+                                    onclick="changePdfSource('../assets/shorthand_document-18-26.pdf#toolbar=0')">Quy tắc gõ âm đầu</a>
+                                <a href="#third-rule" id="third-item" data-toggle="list" 
+                                    role="tab" class="list-group-item list-group-item-action" 
+                                    aria-controls="third-item"
+                                    onclick="changePdfSource('../assets/shorthand_document-27-70.pdf#toolbar=0')">Quy tắc gõ âm chính</a>
+                                <a href="#fourth-rule" id="fourth-item" data-toggle="list" 
+                                    role="tab" class="list-group-item list-group-item-action" 
+                                    aria-controls="fourth-item"
+                                    onclick="changePdfSource('../assets/shorthand_document-71-75.pdf#toolbar=0')">Quy tắc gõ âm cuối</a>
+                                <a href="#fifth-rule" id="fifth-item" data-toggle="list" 
+                                    role="tab" class="list-group-item list-group-item-action" 
+                                    aria-controls="fifth-item"
+                                    onclick="changePdfSource('../assets/shorthand_document-76-78.pdf#toolbar=0')">Quy tắc gõ số</a>
+                                <a href="#sixth-rule" id="sixth-item" data-toggle="list" 
+                                    role="tab" class="list-group-item list-group-item-action" 
+                                    aria-controls="sixth-item"
+                                    onclick="changePdfSource('../assets/shorthand_document-79.pdf#toolbar=0&zoom=67')">Quy tắc xóa</a>
                             </div>
                         </div>
-                        <div class="col-8">
+                        <div class="col-9">
                             <div class="tab-content" id="nav-tabContent">
-                                <div class="tab-pane fade show active" role="tabpanel" aria-labelledby="first-item" id="first-rule">
-                                    <iframe src="../assets/shorthand_document-15-17.pdf#toolbar=0" width="100%" height="650px"></iframe>
-                                </div>
-                                <div class="tab-pane fade" role="tabpanel" aria-labelledby="second-item" id="second-rule">
-                                    <iframe src="../assets/shorthand_document-18-26.pdf#toolbar=0" width="100%" height="650px"></iframe>
-                                </div>
-                                <div class="tab-pane fade" role="tabpanel" aria-labelledby="third-item" id="third-rule">
-                                    <iframe src="../assets/shorthand_document-27-70.pdf#toolbar=0" width="100%" height="650px"></iframe>
-                                </div>
-                                <div class="tab-pane fade" role="tabpanel" aria-labelledby="fourth-item" id="fourth-rule">
-                                    <iframe src="../assets/shorthand_document-71-75.pdf#toolbar=0" width="100%" height="650px"></iframe>
-                                </div>
-                                <div class="tab-pane fade" role="tabpanel" aria-labelledby="fifth-item" id="fifth-rule">
-                                    <iframe src="../assets/shorthand_document-76-78.pdf#toolbar=0" width="100%" height="650px"></iframe>
-                                </div>
-                                <div class="tab-pane fade" role="tabpanel" aria-labelledby="sixth-item" id="sixth-rule">
-                                    <iframe src="../assets/shorthand_document-79.pdf#toolbar=0" width="100%" height="650px"></iframe>
-                                </div>
-                                <div class="tab-pane fade" role="tabpanel" aria-labelledby="seventh-item" id="seventh-rule">
-                                    <iframe src="../assets/shorthand_document-80-82.pdf#toolbar=0" width="100%" height="650px"></iframe>
+                                <div class="tab-pane fade show active">
+                                    <iframe id="pdfFrame" src="../assets/shorthand_document-15-17.pdf#toolbar=0" width="100%" height="500px"></iframe>
                                 </div>
                             </div>
                         </div>
 
                     </div>
                         
-                    </div>
                     <!-- Make components in here -->
                 </div>
                 <div class="app-wrapper-footer">
@@ -319,7 +300,11 @@
         </div>
     </div>
     <script type="text/javascript" src="./../assets/scripts/main.js"></script>
-
+    <script>
+        const changePdfSource = (url) => {
+            document.getElementById('pdfFrame').setAttribute('src',url);   
+        }
+    </script>
 </body>
 
 </html>
