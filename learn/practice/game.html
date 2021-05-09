@@ -20,7 +20,7 @@
     =========================================================
     * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
     -->
-    <link href="../assets/styles/main.css" rel="stylesheet">
+    <link href="./../../assets/styles/main.css" rel="stylesheet">
     <style>
         #box
         {
@@ -84,8 +84,9 @@
             visibility: hidden;
             display: disabled;
         }
-    </style> 
+    </style>    
 </head>
+
 <body>
     <div class="app-container app-theme-white body-tabs-shadow fixed-sidebar fixed-header">
         <div class="app-header header-shadow">
@@ -135,7 +136,7 @@
                                 <div class="widget-content-left">
                                     <div class="btn-group">
                                         <a data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="p-0 btn">
-                                            <img width="42" class="rounded-circle" src="./../assets/images/avatars/2.jpg" alt="">
+                                            <img width="42" class="rounded-circle" src="./../../assets/images/avatars/2.jpg" alt="">
                                             <i class="fa fa-angle-down ml-2 opacity-8"></i>
                                         </a>
                                         <div tabindex="-1" role="menu" aria-hidden="true" class="dropdown-menu dropdown-menu-right">
@@ -206,60 +207,60 @@
                             <ul class="vertical-nav-menu">
                                 <li class="app-sidebar__heading">Dashboards</li>
                                 <li>
-                                    <a href="./../index.html" >
+                                    <a href="./../../index.html" >
                                         <i class="metismenu-icon pe-7s-graph1"></i>
                                         Thống kê 
                                     </a>
                                 </li>
                                 <li class="app-sidebar__heading">Hướng dẫn</li>
                                 <li>
-                                    <a href="./../guide/typing_rules.html">
+                                    <a href="./../../guide/typing_rules.html">
                                         <i class="metismenu-icon pe-7s-diamond"></i>
                                         Quy tắc gõ tốc ký
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="./../guide/shorthand_dictionary.html">
+                                    <a href="./../../guide/shorthand_dictionary.html">
                                         <i class="metismenu-icon pe-7s-diamond"></i>
                                         Từ điển
                                     </a>
                                 </li>
                                 <li class="app-sidebar__heading">Học gõ</li>
                                 <li>
-                                    <a href="./learn_keyboard.html">
+                                    <a href="./../learn_keyboard.html">
                                         <i class="metismenu-icon pe-7s-study"></i>
                                         Làm quen bàn phím
                                     </a>
-                                    <a href="./learn_typing.html" class="mm-active">
+                                    <a href="./../learn_typing.html">
                                         <i class="metismenu-icon pe-7s-study"></i>Học gõ
                                     </a>
                                 </li>
-                                <li>
-                                    <a href="#">
+                                <li class="mn-active">
+                                    <a href="#" aria-expanded="true">
                                         <i class="metismenu-icon pe-7s-target"></i>Luyện tập
-                                        <i class="metismenu-state-icon pe-7s-angle-down caret-left"></i>
+                                        <i class="metismenu-state-icon pe-7s-angle-up caret-left"></i>
                                     </a>
-                                    <ul>
+                                    <ul class="mm-collapse mm-show">
                                         <li>
-                                            <a href="./../learn/practice/rhythm_practice.html">
+                                            <a href="./rhythm_practice.html">
                                                 <i class="metismenu-icon">
                                                 </i>Gõ âm
                                             </a>
                                         </li>
                                         <li>
-                                            <a href="./../learn/practice/word_practice.html">
+                                            <a href="./word_practice.html">
                                                 <i class="metismenu-icon">
                                                 </i>Gõ từ
                                             </a>
                                         </li>
                                         <li>
-                                            <a href="./../learn/practice/sentence_practice.html">
+                                            <a href="./sentence_practice.html">
                                                 <i class="metismenu-icon">
                                                 </i>Gõ câu
                                             </a>
                                         </li>
                                         <li>
-                                            <a href="./../learn/practice/paragraph_practice.html">
+                                            <a href="./paragraph_practice.html" class="mm-active">
                                                 <i class="metismenu-icon">
                                                 </i>Gõ đoạn văn
                                             </a>
@@ -268,21 +269,21 @@
                                 </li>
                                 <li class="app-sidebar__heading">Soạn thảo</li>
                                 <li>
-                                    <a href="./../editor/editor.html">
+                                    <a href="./../../editor/editor.html">
                                         <i class="metismenu-icon pe-7s-note">
                                         </i>Tạo văn bản
                                     </a>
                                 </li>
                                 <li class="app-sidebar__heading">FAQ</li>
                                 <li>
-                                    <a href="./../faq/faq.html">
+                                    <a href="./../../faq/faq.html">
                                         <i class="metismenu-icon pe-7s-info">
                                         </i>Câu hỏi thường gặp
                                     </a>
                                 </li>
                                 <li class="app-sidebar__heading">Tài khoản của tôi</li>
                                 <li>
-                                    <a href="./../others/account.html">
+                                    <a href="./../../others/account.html">
                                         <i class="metismenu-icon pe-7s-user">
                                         </i>Thông tin tài khoản
                                     </a>
@@ -296,10 +297,10 @@
                             <div class="page-title-wrapper">
                                 <div class="page-title-heading">
                                     <div class="page-title-icon">
-                                        <i class="pe-7s-study icon-gradient bg-mean-fruit" style="margin: -6px;">
+                                        <i class="pe-7s-target icon-gradient bg-mean-fruit" style="margin: -6px;">
                                         </i>
                                     </div>
-                                    <div>Học gõ
+                                    <div>Game
                                         <div class="page-title-subheading">
                                         </div>
                                     </div>
@@ -343,6 +344,6 @@
                 </div>
         </div>
     </div>
-<script type="text/javascript" src="./../assets/scripts/main.js"></script></body>
-<script src="./../assets/scripts/game.js"></script>
+<script type="text/javascript" src="./../../assets/scripts/main.js"></script></body>
+<script src="./../../assets/scripts/game.js"></script>
 </html>
