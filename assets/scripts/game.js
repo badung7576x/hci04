@@ -85,7 +85,7 @@ function keyboardInput() {
 
 function startGame() {
     placeLetterTimer = setInterval(placeLetter, placeLetterInterval);
-    moveLettersTimer = setInterval(moveLetters, 200);
+    moveLettersTimer = setInterval(moveLetters, 100);
     document.addEventListener('keydown', keyboardInput);
     startButton.classList.add("disabled");
 }
