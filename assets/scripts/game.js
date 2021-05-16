@@ -3,6 +3,14 @@ var placeLetterTimer, moveLettersTimer;
 var startButton, resetButton;
 var box, message, score;
 
+var list_am_dau = {'S': ['s'], 'T':['t'], 'K': ['k', 'c'], 'H':['h'], 'R':['r'], 'P':['b'], 
+                   'KR': ['ng', 'ngh'], 'KP':['g', 'gi'], 'SH':['d'], 'SP':['n', 'đ'], 
+                   'PR':['l', 'q'], 'SR':['ch'], 'SK':['nh'], 'TK':['d'], 'TP':['n'], 
+                   'RH':['m'], 'SPH':['p'], 'SPK':['v'], 'STR':['c']};
+var list_am_chinh = {'-HSUO':['uổ'], 'N-SUO':['uỗ'], :['ă'], 'N-UO':['uộ'], '-SY':['uớ'], :['uỳa'], :['uờ'], :['uở'], 
+                     :['uỡ'], :['uâ'],:[ 'uợ'], :['ọa']};
+// var list_am_cuoi = {'p', 'c', 't', 'ch', 'u', 'ng', 'i', 'y', 'nh', 'm', 'n', 'o'};
+
 function placeLetter() {
     var letter = String.fromCharCode(97 + Math.floor(Math.random() * 26));
     var newLetter = document.createElement("div");
@@ -17,9 +25,13 @@ function placeLetter() {
 
 function moveLetters() {
     var boxes = document.querySelectorAll("#box > div");
+    let failCount = 0;
     for (var i = 0; i < boxes.length; i++) {
         boxes[i].style.right = parseInt(boxes[i].style.right) - 10 + "px";
         if (parseInt(boxes[i].style.right) <= -10) {
+            failCount += 1;
+        }
+        if (failCount == 5) {
             endGame();
         }
     }
