@@ -29,9 +29,6 @@ function moveLetters() {
     for (var i = 0; i < boxes.length; i++) {
         boxes[i].style.right = parseInt(boxes[i].style.right) - 10 + "px";
         if (parseInt(boxes[i].style.right) <= -10) {
-            failCount += 1;
-        }
-        if (failCount == 5) {
             endGame();
         }
     }
@@ -88,7 +85,7 @@ function keyboardInput() {
 
 function startGame() {
     placeLetterTimer = setInterval(placeLetter, placeLetterInterval);
-    moveLettersTimer = setInterval(moveLetters, 100);
+    moveLettersTimer = setInterval(moveLetters, 200);
     document.addEventListener('keydown', keyboardInput);
     startButton.classList.add("disabled");
 }
