@@ -28449,14 +28449,16 @@
           type: "line",
           data: {
               labels: ["25/4", "26/4", "27/4", "28/4", "29/4", "30/4", "30/4", "1/5", "2/5"],
-              datasets: [{
-                  label: "Thời gian học gõ (h)",
-                  backgroundColor: window.chartColors.red,
-                  borderColor: window.chartColors.red,
-                  data: [1.5, 1, 0.5, 2, 1.3, 1.1, 0.8, 0.4, 1],
-                  fill: !1,
-                  yAxisID: 'h',
-              }, {
+              datasets: [
+                // {
+                //     label: "Thời gian học gõ (h)",
+                //     backgroundColor: window.chartColors.red,
+                //     borderColor: window.chartColors.red,
+                //     data: [1.5, 1, 0.5, 2, 1.3, 1.1, 0.8, 0.4, 1],
+                //     fill: !1,
+                //     yAxisID: 'h',
+                // }, 
+                {
                   label: "Tốc độ gõ (wps)",
                   fill: !1,
                   backgroundColor: window.chartColors.green,
@@ -28517,22 +28519,22 @@
                             min: 0
                         }
                     },
-                    {
-                        id: "h",
-                        display: !0,
-                        scaleLabel: {
-                            display: !0,
-                            labelString: "Thời gian học gõ (h)"
-                        },
-                        position: 'right',
-                        grid: {
-                            drawOnChartArea: false, // only want the grid lines for one axis to show up
-                        },
-                        ticks: {
-                            max: 6,
-                            min: 0
-                        }
-                    }
+                    // {
+                    //     id: "h",
+                    //     display: !0,
+                    //     scaleLabel: {
+                    //         display: !0,
+                    //         labelString: "Thời gian học gõ (h)"
+                    //     },
+                    //     position: 'right',
+                    //     grid: {
+                    //         drawOnChartArea: false, // only want the grid lines for one axis to show up
+                    //     },
+                    //     ticks: {
+                    //         max: 6,
+                    //         min: 0
+                    //     }
+                    // }
                 ]
               }
           }
