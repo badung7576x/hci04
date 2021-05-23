@@ -21,8 +21,15 @@
     * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
     -->
 <link href="./../../assets/styles/main.css" rel="stylesheet"></head>
+<!-- jquery + Bootstrap -->
+<script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js" integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<!-- End here -->
 <body>
     <div class="app-container app-theme-white body-tabs-shadow fixed-sidebar fixed-header">
+
         <div class="app-header header-shadow">
             <div class="app-header__logo">
                 <div class="logo-src"></div>
@@ -270,7 +277,18 @@
                             </div>
                         </div>            
                         <!-- Make components in here -->
-
+                            <center>
+                                <div class="row shorthand" id="shorthand">
+                                    <div class="col-7">
+                                        <div class="form-group">
+                                            <!-- <label for="output">Văn bản:</label> -->
+                                            <textarea class="form-control  z-depth-1" rows="10" id="output" wrap="on" style="height: 50px; width: 100px;overflow-y: scroll" hidden></textarea>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- canvas for game-->
+                                <canvas id="flappy_bird" width="288" height="512"></canvas>  <!-- Added by vuaphapthuat410 -->
+                            </center> 
                         <!-- Make components in here -->
                     </div>
                     <div class="app-wrapper-footer">
@@ -293,5 +311,20 @@
                 </div>
         </div>
     </div>
+<!-- data path for json file -->
+<div id="input-person" data-path="Li8uLi8uLi9hc3NldHMvanNvbi9kaWN0Lmpzb24="></div>
+<div id="keyCodeToSteno" data-path="Li8uLi8uLi9hc3NldHMvanNvbi9rZXlDb2RlVG9TdGVuby5qc29u"></div>
+<div id="binaryToSteno" data-path="Li8uLi8uLi9hc3NldHMvanNvbi9iaW5hcnlUb1N0ZW5vLmpzb24="></div>
+<div id="keyCodeToStenoNumber" data-path="Li8uLi8uLi9hc3NldHMvanNvbi9rZXlDb2RlVG9TdGVub051bWJlci5qc29u"></div>
+<div id="keyCodeToQwerty" data-path="Li8uLi8uLi9hc3NldHMvanNvbi9rZXlDb2RlVG9Rd2VydHkuanNvbg=="></div>
+<!-- script needed for steno keyboard mapping -->
+<script src="./../../assets/scripts/jquery.base64.js"></script>
+<script src="./../../assets/scripts/jquery.slimscroll.js"></script>
+<script src="./../../assets/scripts/overwriteMode.js"></script>
+<script src="./../../assets/scripts/ploverdemo_mod.js"></script>
+<!-- Bootstrap tether Core JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<!-- main script and game scripts -->
 <script type="text/javascript" src="./../../assets/scripts/main.js"></script></body>
+<script src="./../../assets/scripts/games/flappybird/flappyBird.js"></script>
 </html>
