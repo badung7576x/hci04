@@ -24615,3 +24615,18 @@ a.fc-more:hover {
 	margin-bottom: 30px;
 	background-size: 100%
 }
+
+
+.am-dau {
+	width: 14.28%;
+    text-align: center;
+}
+
+.timer {
+    font-size: 18px;
+    font-weight: lighter;
+    color: #ff0844;
+    width: 120px;
+    margin-left: 20px;
+	margin-top: 20px;
+}
