@@ -265,20 +265,38 @@
                                 </div>
                             </div>
                         </div>            
-                        <!-- Make components in here -->
-                        <div id="game"></div>
-                            <center>
-                                <div class="row shorthand" id="shorthand">
-                                    <div class="col-7">
-                                        <div class="form-group">
-                                            <!-- <label for="output">Văn bản:</label> -->
-                                            <textarea class="form-control  z-depth-1" rows="10" id="output" wrap="on" style="height: 50px; width: 100px;overflow-y: scroll" hidden></textarea>
+                        <!-- Make components in here -->    
+                        <div style="float: right; margin-right: 30px;">
+                            <button style="background-color: rgb(133, 178, 214);" onclick="clickButton()" id="btn">Hướng dẫn</button>
+                        </div>
+                        <div class=" row col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                            <div id="game" style="margin-top: 15px;" class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                                <center>
+                                    <div class="row shorthand" id="shorthand">
+                                        <div class="col-7">
+                                            <div class="form-group">
+                                                <!-- <label for="output">Văn bản:</label> -->
+                                                <textarea class="form-control  z-depth-1" rows="10" id="output" wrap="on" style="height: 50px; width: 100px;overflow-y: scroll" hidden></textarea>
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
-                                <!-- canvas for game-->
-                                <canvas id="flappy_bird" width="288" height="512"></canvas>  <!-- Added by vuaphapthuat410 -->
-                            </center> 
+                                    <!-- canvas for game-->
+                                    <canvas id="flappy_bird" width="288" height="512"></canvas>  <!-- Added by vuaphapthuat410 -->
+                                </center> 
+                            </div>
+                            <div id="rule" style="margin-top: 30px; width: 80%; display: none;" class="col-xs-6 col-sm-6 col-md-6 col-lg-6 border border-info">
+                                
+                                <span style="text-align: center; color: red;"><h2>Giới thiệu</h2></span> 
+                                <button style="float: right; margin-right: -5px; margin-top: -45px;" id="closebtn" onclick="closeButton()" class="close" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                <span>Flappy bird từng là game đình đám trên di động với chú chim rất dễ thương.
+                                    Tại đây chúng tôi tái hiện lại trò chơi đình đám này và đưa đến cho bạn một trải nghiệm thú vị mới.</span> <br>
+                                <span>Lúc bắt đầu, trên đầu chú chim sẽ xuất hiện 1 từ và nhiệm vụ của bạn là gõ từ đấy theo quy tắc tốc ký trước khi chú chim rơi xuống đất.
+                                    Sau đó chú chim sẽ bay qua ống và hiện thị từ tiếp theo. <br>
+                                    Nếu để chú chim chạm đất thì bạn sẽ thua đấy nhé !! <br>
+                                    Chúc bạn chơi game vui vẻ.</span><br>
+                                <img style="float: right; margin-top: 50px;" src="bird.png">
+                            </div>
+                        </div>
                         <!-- Make components in here -->
                     </div>
                     <div class="app-wrapper-footer">
@@ -301,6 +319,17 @@
                 </div>
         </div>
     </div>
+
+    <script>
+        function clickButton() {
+            document.getElementById('game').className = 'col-xs-6 col-sm-6 col-md-6 col-lg-6';
+            document.getElementById('rule').style.display = 'block';
+        }
+        function closeButton() {
+            document.getElementById('rule').style.display = 'none';
+            document.getElementById('game').className = 'col-xs-12 col-sm-12 col-md-12 col-lg-12';
+        }
+    </script>
 <!-- data path for json file -->
 <div id="input-person" data-path="Li8uLi8uLi9hc3NldHMvanNvbi9kaWN0Lmpzb24="></div>
 <div id="keyCodeToSteno" data-path="Li8uLi8uLi9hc3NldHMvanNvbi9rZXlDb2RlVG9TdGVuby5qc29u"></div>
