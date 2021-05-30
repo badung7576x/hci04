@@ -297,6 +297,61 @@
                                 <img style="float: right; margin-top: 50px;" src="bird.png">
                             </div>
                         </div>
+                        <!-- Modal here -->
+                        <div class="modal fade show" id="modalFinishLearn" aria-modal="true" role="dialog" style="display: none;">
+                            <div class="modal-dialog modal-dialog-centered modal-md shadow-none" style="">
+                                <div class="modal-content">
+                                    <div style="margin-bottom: -0.5rem!important;" class="card shadow mb-4 border-top-primary">
+                                        <div style="display: flex; justify-content:center" class="card-header py-3">
+                                            <h6 class="m-0 font-weight-bold text-primary"> Bạn đã hoàn thành bài học</h6>
+                                        </div>
+                                        <div class="card-body">
+                                            <div class="">
+                                                <div>
+                                                    <table style="width: 80%; margin: auto;" id="table-tailieu" class="table table-bordered table-striped">
+                                                        <thead style="text-align: center; background-color: #1cc88a;" class="badge-info">
+                                                            <tr>
+                                                                <th>Tiêu chí</th>
+                                                                <th>Kết quả</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody style="text-align: center;">
+                                                            <tr>
+                                                                <td>Tổng số âm đầu</td>
+                                                                <td>7</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>Gõ đúng</td>
+                                                                <td>6</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>Gõ sai</td>
+                                                                <td>1</td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                    <div style="text-align: center; padding: 10px;">
+                                                        <i style="font-size: 30px; color: #F8FF02;" class="fas fa-star"></i>
+                                                        <i style="font-size: 40px; color: #F8FF02;" class="fas fa-star"></i>
+                                                        <i style="font-size: 30px; color: #d1d3e2;" class="fas fa-star"></i>
+                    
+                                                    </div>
+                                                    <h6 style="text-align: center;" class="m-0 font-weight-bold text-primary">Bạn nhận được 2/3 sao cho bài học này!</h6>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                    
+                                    <!-- Modal footer -->
+                                    <div class="modal-footer">
+                                        <button onclick="location.reload()" type="button" class="btn btn-primary">Học lại</button> <!-- reload -->
+                                        <button type="button" class="btn btn-success" id="nextBtn">Bài kế</button>
+                                        <!-- <button type="button" class="btn btn-secondary" id="closeBtn" data-dismiss="modal">Close</button> -->
+                                    </div>
+                    
+                                </div>
+                            </div>
+                        </div>
                         <!-- Make components in here -->
                     </div>
                     <div class="app-wrapper-footer">
@@ -319,7 +374,7 @@
                 </div>
         </div>
     </div>
-
+    <!-- script to handle game rule -->
     <script>
         function clickButton() {
             document.getElementById('game').className = 'col-xs-6 col-sm-6 col-md-6 col-lg-6';
@@ -330,6 +385,16 @@
             document.getElementById('game').className = 'col-xs-12 col-sm-12 col-md-12 col-lg-12';
         }
     </script>
+    <!-- script to close result modal -->
+    <!-- <script>
+    	var modal = document.getElementById("modalFinishLearn");
+
+		var closebtn = document.getElementById("closeBtn");
+
+		closebtn.onclick = function() {
+		    modal.style.display = "none";
+}
+    </script> -->
 <!-- data path for json file -->
 <div id="input-person" data-path="Li8uLi8uLi9hc3NldHMvanNvbi9kaWN0Lmpzb24="></div>
 <div id="keyCodeToSteno" data-path="Li8uLi8uLi9hc3NldHMvanNvbi9rZXlDb2RlVG9TdGVuby5qc29u"></div>
