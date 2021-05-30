@@ -246,3 +246,21 @@
 .done {
     background-color: #1CC88A
 }
+
+#backBtn {
+    width: 175px;
+    height: 40px;
+    text-align: center;
+    background: #FFBD69;
+    border-radius: 4px;
+}
+
+#backBtnText {
+    font-family: sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 22px;
+    text-align: center;
+    color: #FFFFFF;
+}
