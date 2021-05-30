@@ -271,7 +271,7 @@
                         </div>            
                         <!-- Make components in here -->
                         <div style="padding-top: 0.3rem !important;padding-bottom: 0.5rem !important;" class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-                            <h6 class="m-0 font-weight-bold text-primary"> <a href="hocgo_amdau_bai1.html">Bài 1: Nhóm âm đầu cùng dạng chữ, cùng phát âm</a> </h6>
+                            <h6 class="m-0 font-weight-bold text-primary"> <a href="learn.html">Bài 1: Nhóm âm đầu cùng dạng chữ, cùng phát âm</a> </h6>
                             <div class=" no-arrow">
                                 <div style="padding-right: 16px;" class="container-fluid">
                                     <div style="justify-content: space-around;" class="row">
@@ -280,7 +280,7 @@
                                             <span class="seconds">00</span> .
                                             <span class="milliseconds">000</span>
                                         </h1>
-                                        <button style="width: fit-content" type="button" class="btn btn-primary btn-go">Start</button>
+                                        <button style="width: fit-content" onclick="enableKeyboard()" type="button" class="btn btn-primary btn-go">Bắt đầu</button>
                                         <button onclick="window.location.href='./../practice/ez_game.html'" style="width: fit-content; margin-left: 3px;" type="button" class="btn btn-success btn-go">Luyện tập</button>
                                     </div>
 
@@ -449,9 +449,7 @@
                                     <ul class="nav">
                                         <button id="displayModalBtn" style="visibility: hidden;" data-toggle="modal" data-target="#modalFinishLearn"></button>
                                     </ul>
-                                    <ul class="nav">
-                                        <button id="disableKeyboardBtn" style="visibility: hidden;" onclick="disable();"></button>
-                                    </ul>
+                                    
                                 </div>
                                 <div class="app-footer-right">
                                     <ul class="nav">
@@ -535,17 +533,17 @@
 <script type="text/javascript" src="./../../assets/scripts/jquery.easing.min.js"></script>
 <script src="https://unpkg.com/ionicons@4.2.4/dist/ionicons.js"></script>
 <script type="text/javascript" src="./learn_keyboard.js"></script>
-    <script>
-        function copyClipboard() {
-            var copyText = $("#content_shorthand").val();
+<script>
+    function copyClipboard() {
+        var copyText = $("#content_shorthand").val();
 
-            navigator.clipboard.writeText(copyText)
-        }
-    </script>
-    <script>
-        function goBack() {
-          window.history.back();
-        }
-    </script>
+        navigator.clipboard.writeText(copyText)
+    }
+
+    function goBack() {
+      window.history.back();
+    }
+
+</script>
 </body>
 </html>

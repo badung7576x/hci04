@@ -1,6 +1,6 @@
-window.addEventListener('load', _ => {
-    captureKeys();
-});
+// window.addEventListener('load', _ => {
+//     captureKeys();
+// });
 
 function captureKeys() {
     window.addEventListener('keydown', e => {
