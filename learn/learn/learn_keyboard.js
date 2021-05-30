@@ -1060,9 +1060,6 @@ if (s === false) {
 }
 
 
-
-
-
 //Phim W
 $("#fullpage").keydown(function(event) {
     if (event.keyCode === 87) {

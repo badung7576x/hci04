@@ -304,7 +304,7 @@
 
 
                                 <!-- Bản phím tốc ký -->
-                                <div style="display: flex; justify-content: space-between;" class="mb-4">
+                                <div id="keyboardSteno" style="display: flex; justify-content: space-between;" class="mb-4">
                                     <div style="display: block;" class="keyboard-tocky">
                                         <div class="row">
                                             <div style="margin-top: 1rem;" class="keyboard">
@@ -448,6 +448,9 @@
                                     </ul>
                                     <ul class="nav">
                                         <button id="displayModalBtn" style="visibility: hidden;" data-toggle="modal" data-target="#modalFinishLearn"></button>
+                                    </ul>
+                                    <ul class="nav">
+                                        <button id="disableKeyboardBtn" style="visibility: hidden;" onclick="disable();"></button>
                                     </ul>
                                 </div>
                                 <div class="app-footer-right">
