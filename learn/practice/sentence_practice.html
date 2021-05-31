@@ -283,7 +283,7 @@
                         </div>
                         <!-- Khung hiển thị câu văn -->
                         <div style="display: flex;  background-color: #D1D3E2; width: 1200px; margin: auto; border-radius: 95px; font-size: 19px; color: black; padding: 10px">
-                            <div style="border-top-left-radius: 50px;border-bottom-left-radius: 50px;" class="am-dau">Không</div>
+                            <div style="border-top-left-radius: 50px;border-bottom-left-radius: 50px;" class="am-dau">không</div>
                             <div class="am-dau">có</div>
                             <div class="am-dau">tiền</div>
                             <div class="am-dau">thì</div>
@@ -457,6 +457,61 @@
                                 </div>
                             </div>
                         </div>
+                        <!-- Modal here -->
+                        <div class="modal fade show" id="modalFinishLearn" aria-modal="true" role="dialog" style="display: none;">
+                            <div class="modal-dialog modal-dialog-centered modal-md shadow-none" style="">
+                                <div class="modal-content">
+                                    <div style="margin-bottom: -0.5rem!important;" class="card shadow mb-4 border-top-primary">
+                                        <div style="display: flex; justify-content:center" class="card-header py-3">
+                                            <h6 class="m-0 font-weight-bold text-primary"> Bạn đã hoàn thành bài luyện tập</h6>
+                                        </div>
+                                        <div class="card-body">
+                                            <div class="">
+                                                <div>
+                                                    <table style="width: 80%; margin: auto;" id="table-tailieu" class="table table-bordered table-striped">
+                                                        <thead style="text-align: center; background-color: #1cc88a;" class="badge-info">
+                                                            <tr>
+                                                                <th>Tiêu chí</th>
+                                                                <th>Kết quả</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody style="text-align: center;">
+                                                            <tr>
+                                                                <td>Tổng số từ trong câu</td>
+                                                                <td>8</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>Số từ gõ đúng</td>
+                                                                <td>6</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>Số từ gõ sai</td>
+                                                                <td>1</td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                    <div style="text-align: center; padding: 10px;">
+                                                        <i style="font-size: 30px; color: #F8FF02;" class="fas fa-star"></i>
+                                                        <i style="font-size: 40px; color: #F8FF02;" class="fas fa-star"></i>
+                                                        <i style="font-size: 30px; color: #d1d3e2;" class="fas fa-star"></i>
+                    
+                                                    </div>
+                                                    <h6 style="text-align: center;" class="m-0 font-weight-bold text-primary">Bạn nhận được 2/3 sao cho bài luyện tập này!</h6>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                    
+                                    <!-- Modal footer -->
+                                    <div class="modal-footer">
+                                        <button onclick="location.reload()" type="button" class="btn btn-primary">Luyện tập lại</button> <!-- reload -->
+                                        <button type="button" class="btn btn-secondary" id="nextBtn">Kết thúc luyện tập</button>
+                                        <!-- <button type="button" class="btn btn-secondary" id="closeBtn" data-dismiss="modal">Close</button> -->
+                                    </div>
+                    
+                                </div>
+                            </div>
+                        </div>
                         <!-- Make components in here -->
                     </div>
                     <div class="app-wrapper-footer">
@@ -480,6 +535,7 @@
         </div>
     </div>
     <script type="text/javascript" src="./../../assets/scripts/keyboard.js"></script>
+
 <!-- data path for json file -->
 <div id="input-person" data-path="Li8uLi8uLi9hc3NldHMvanNvbi9kaWN0Lmpzb24="></div>
 <div id="keyCodeToSteno" data-path="Li8uLi8uLi9hc3NldHMvanNvbi9rZXlDb2RlVG9TdGVuby5qc29u"></div>
@@ -493,4 +549,27 @@
 <script src="./../../assets/scripts/ploverdemo_mod.js"></script>
 <!-- Bootstrap tether Core JavaScript -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+<!-- script for handling sentence typing highlight -->
+<script>
+    let dictList = [];
+    dictList.push("không", "có", "tiền", "thì", "cạp", "đất", "mà", "ăn");
+    $("#fullpage").keyup(function(){
+        $("#fullpage").ready(function() {
+            var typedWord = $("#output").val().trim();
+            var wordList = typedWord.split(" ");
+            for (i = 0; i < dictList.length; i++) {
+                if(dictList[i] == wordList[i])
+                    document.getElementsByClassName("am-dau")[i].style.backgroundColor = "#1CC88A";
+                else {
+                    document.getElementsByClassName("am-dau")[i].style.backgroundColor = "#D1D3E2";
+                    break;
+                }
+                if(i == dictList.length - 1) {$("#modalFinishLearn").style.display = "show"};
+            }
+        });
+    });
+    
+
+</script>
 </html>
