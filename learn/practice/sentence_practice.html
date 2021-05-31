@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" id='fullpage'>
 
 <head>
     <meta charset="utf-8">
@@ -23,6 +23,7 @@
 <link href="./../../assets/styles/main.css" rel="stylesheet">
 <link href="./../../assets/styles/keyboard.css" rel="stylesheet">
 
+<script type="text/javascript" src="./../../assets/scripts/main.js"></script>
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 <body>
@@ -281,23 +282,17 @@
                             </div>
                         </div>
                         <!-- Khung hiển thị câu văn -->
-                        <div style="display: flex;  background-color: #D1D3E2; width: 1200px; margin: auto; border-radius: 95px; font-size: 19px; color: black">
-                            <div style="border-top-left-radius: 50px;border-bottom-left-radius: 50px;" class="am-dau">Trăm</div>
-                            <div class="am-dau">năm</div>
-                            <div class="am-dau">trong</div>
-                            <div class="am-dau">cõi</div>
-                            <div class="am-dau">người</div>
-                            <div class="am-dau">Chữ</div>
-                            <div class="am-dau">tài</div>
-                            <div class="am-dau">chữ</div>
-                            <div class="am-dau">mệnh</div>
-                            <div class="am-dau">khéo</div>
-                            <div class="am-dau">là</div>
-                            <div class="am-dau">ghét</div>
-
-                            <div style="border-top-right-radius: 50px;border-bottom-right-radius: 50px;" class="am-dau">nhau</div>
+                        <div style="display: flex;  background-color: #D1D3E2; width: 1200px; margin: auto; border-radius: 95px; font-size: 19px; color: black; padding: 10px">
+                            <div style="border-top-left-radius: 50px;border-bottom-left-radius: 50px;" class="am-dau">Không</div>
+                            <div class="am-dau">có</div>
+                            <div class="am-dau">tiền</div>
+                            <div class="am-dau">thì</div>
+                            <div class="am-dau">cạp</div>
+                            <div class="am-dau">đất</div>
+                            <div class="am-dau">mà</div>
+                            <div style="border-top-right-radius: 50px;border-bottom-right-radius: 50px;" class="am-dau">ăn</div>
                         </div>
-                        <div id="request" style="margin-top: 0px; font-weight: 700; color: #ffb700; font-size: 20px; ">Tổ hợp cần gõ: </div>
+                        <div id="request" style="margin-top: 0px; font-weight: 700; color: #ffb700; font-size: 20px; padding-top: 20px">Tổ hợp cần gõ: KH-OW-G K-S-O T-HIE-N TH-H*I KN-A-TK TP-S*W-NT RH-HA *-A-N</div>
                         <!-- Khung gõ -->
                         <div> 
                             <div class="main-card mb-2 card">
@@ -328,7 +323,9 @@
                                         </div> -->
                                     </div>
                                         <div class="col-sm-12" style="padding: 0;">
-                                            <textarea name="text" id="content_shorthand" class="form-control" rows="6"></textarea>
+                                            <div class="row shorthand" id="shorthand">
+                                                <textarea name="text" id="output" class="form-control" rows="6"></textarea>
+                                            </div>
                                         </div>
                                     </form>
                                 </div>
@@ -460,9 +457,6 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="hidden">
-                            <input type="hidden" class="form-control" id="message" value="Nội dung đã được sao chép vào clipboard!" />
-                        </div>
                         <!-- Make components in here -->
                     </div>
                     <div class="app-wrapper-footer">
@@ -486,12 +480,17 @@
         </div>
     </div>
     <script type="text/javascript" src="./../../assets/scripts/keyboard.js"></script>
-    <script>
-        function copyClipboard() {
-            var copyText = $("#content_shorthand").val();
-
-            navigator.clipboard.writeText(copyText)
-        }
-    </script>
-<script type="text/javascript" src="./../../assets/scripts/main.js"></script></body>
+<!-- data path for json file -->
+<div id="input-person" data-path="Li8uLi8uLi9hc3NldHMvanNvbi9kaWN0Lmpzb24="></div>
+<div id="keyCodeToSteno" data-path="Li8uLi8uLi9hc3NldHMvanNvbi9rZXlDb2RlVG9TdGVuby5qc29u"></div>
+<div id="binaryToSteno" data-path="Li8uLi8uLi9hc3NldHMvanNvbi9iaW5hcnlUb1N0ZW5vLmpzb24="></div>
+<div id="keyCodeToStenoNumber" data-path="Li8uLi8uLi9hc3NldHMvanNvbi9rZXlDb2RlVG9TdGVub051bWJlci5qc29u"></div>
+<div id="keyCodeToQwerty" data-path="Li8uLi8uLi9hc3NldHMvanNvbi9rZXlDb2RlVG9Rd2VydHkuanNvbg=="></div>
+<!-- script needed for steno keyboard mapping -->
+<script src="./../../assets/scripts/jquery.base64.js"></script>
+<!-- <script src="./../../assets/scripts/jquery.slimscroll.js"></script> -->
+<script src="./../../assets/scripts/overwriteMode.js"></script>
+<script src="./../../assets/scripts/ploverdemo_mod.js"></script>
+<!-- Bootstrap tether Core JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 </html>
