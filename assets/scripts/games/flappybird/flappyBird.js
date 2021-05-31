@@ -11,7 +11,8 @@ var pipeSouth = new Image();
 var scoreboard = new Image();
 var gameover = new Image();
 var get_ready = new Image();
-var start_button = new Image();
+var title = new Image();
+var button = new Image();
 var instructions = new Image();
 
 // src is source - link here depend on word_practice.html file not this js file
@@ -23,7 +24,8 @@ pipeSouth.src = "./../../assets/scripts/games/flappybird/images/pipeSouth.png";
 scoreboard.src = "./../../assets/scripts/games/flappybird/images/scoreboard.png";
 gameover.src = "./../../assets/scripts/games/flappybird/images/gameover.png";
 get_ready.src = "./../../assets/scripts/games/flappybird/images/get-ready.png";
-start_button.src = "./../../assets/scripts/games/flappybird/images/start-button.png"
+title.src = "./../../assets/scripts/games/flappybird/images/title.png";
+button.src = "./../../assets/scripts/games/flappybird/images/start-button.png"
 instructions.src = "./../../assets/scripts/games/flappybird/images/instructions.png"
 
 // some variables
@@ -55,8 +57,36 @@ var input = "";
 // on key down
 // any key pressed
 //document.addEventListener("keydown", () => {start = false});
-cvs.addEventListener("click", () => {start = false; $("#output").focus()});
+
+// add event listeners for start button
+button.addEventListener("click", () =>{preload = false});
+// change view and focus to textarea to start playing
+cvs.addEventListener("click", (evt) => {
+	if(preload == false) { // check tap click in start scene
+		start = false; 
+		$("#output").focus();
+	}
+	else { // check button click in preload scene
+		var mousePos = getMousePos(cvs,evt);
+		if(mousePos.x > (cvs.width - button.width)/2 && mousePos.x < (cvs.width + button.width)/2
+			&& mousePos.y > cvs.height/2 && mousePos.y < cvs.height/2 + button.height/2) {
+			start = true;
+			preload = false;
+		}
+	}
+});
+
+// check keyup event for matching pattern
 document.addEventListener("keyup", () => {typing()}); 
+
+//Get Mouse Position on canvas
+function getMousePos(canvas, evt) {
+    var rect = canvas.getBoundingClientRect();
+    return {
+        x: evt.clientX - rect.left,
+        y: evt.clientY - rect.top
+    };
+}
 
 // will change in future to fit the requirement
 function moveUp(dist) {
@@ -98,19 +128,29 @@ pipe[0] = {
 
 // draw images
 var spd = 1; //set pipe speed
-var start = true;
+var preload = true;
+var start = false;
 var pause = false;
 
 function draw(){
     
     ctx.drawImage(bg,0,0);
-    if(start == true) {
+    if(preload == true) {
+    	// foreground
+	    ctx.drawImage(fg,0,cvs.height - fg.height);
+	    // draw title
+	    ctx.drawImage(title, (cvs.width - get_ready.width)/2, 40);
+	    // draw button
+	    ctx.drawImage(button, (cvs.width - button.width)/2, cvs.height/2);
+	    requestAnimationFrame(draw);
+    }
+    else if(start == true && preload == false) {
     	// foreground
 	    ctx.drawImage(fg,0,cvs.height - fg.height);
 	    // bird on screen
 	    ctx.drawImage(bird,bX,bY);
 	    ctx.drawImage(get_ready, (cvs.width - get_ready.width)/2, 40);
-	    ctx.drawImage(instructions,(cvs.width - start_button.width)/2, cvs.height - fg.height - instructions.height);
+	    ctx.drawImage(instructions,(cvs.width - instructions.width)/2, cvs.height - fg.height - instructions.height);
 	    requestAnimationFrame(draw);
     }
     
@@ -174,7 +214,14 @@ function draw(){
 
 	    if(pause == false) {requestAnimationFrame(draw);} // callback function to render animation   
 	    else { // render last time
-	    	ctx.drawImage(gameover, (cvs.width - gameover.width)/2, (cvs.height - gameover.height)/2);
+	    	ctx.drawImage(gameover, (cvs.width - gameover.width)/2, 40);
+	    	ctx.drawImage(scoreboard, (cvs.width - scoreboard.width)/2, 150);
+	    	// fill text
+	    	
+	    	ctx.drawImage(button, (cvs.width - button.width)/2, (cvs.height - button.height)/1.5);
+
+	    	var modal = document.getElementById("modalFinishLearn");
+	    	setTimeout(() => {modal.style.display = "block"; cvs.style.display = "none";}, 1000);
 	    } 
     }
 }

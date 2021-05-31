@@ -266,37 +266,56 @@
                         </div>            
                         <!-- Make components in here -->
                         <div> 
-                            <div class="main-card mb-2 card">
-                                <div class="card-body">
-                                    <form>
-                                    <div class="row">
-                                        <div class="col-5">
-                                            <h5 class="card-title">Editor</h5>
-                                        </div>
-                                        <div class="col-7">
-                                            <ul class="nav float-right">
-                                                <li class="nav-item ml-2" title="Clear input">
-                                                    <button type="reset" class="mb-2 btn-transition btn btn-sm btn-outline-primary">
-                                                        <i class="metismenu-icon pe-7s-refresh"></i>
-                                                    </button>
-                                                </li>
-                                                <li class="nav-item ml-2" title="Copy content">
-                                                    <button type="button" class="mb-2 btn-transition btn btn-sm btn-outline-primary" id="showtoast" onclick="copyClipboard()">
-                                                        <i class="metismenu-icon pe-7s-copy-file"></i>
-                                                    </button>
-                                                </li>
-                                                <li class="nav-item ml-2" title="Download content">
-                                                    <button type="button" class="mb-2 btn-transition btn btn-sm btn-outline-primary">
-                                                        <i class="metismenu-icon pe-7s-download"></i>
-                                                    </button>
-                                                </li>
-                                            </ul>
+                            <div class="row">
+                                <div class="col-8">
+                                    <div class="main-card mb-2 card">
+                                        <div class="card-body">
+                                            <div class="row">
+                                                <div class="col-5">
+                                                    <h5 class="card-title">Editor</h5>
+                                                </div>
+                                                <div class="col-7">
+                                                    <ul class="nav float-right">
+                                                        <li class="nav-item ml-2" title="Clear input">
+                                                            <button type="reset" class="mb-2 btn-transition btn btn-sm btn-outline-primary">
+                                                                <i class="metismenu-icon pe-7s-refresh"></i>
+                                                            </button>
+                                                        </li>
+                                                        <li class="nav-item ml-2" title="Copy content">
+                                                            <button type="button" class="mb-2 btn-transition btn btn-sm btn-outline-primary" id="showtoast" onclick="copyClipboard()">
+                                                                <i class="metismenu-icon pe-7s-copy-file"></i>
+                                                            </button>
+                                                        </li>
+                                                        <li class="nav-item ml-2" title="Download content">
+                                                            <button type="button" class="mb-2 btn-transition btn btn-sm btn-outline-primary">
+                                                                <i class="metismenu-icon pe-7s-download"></i>
+                                                            </button>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-12" style="padding: 0;">
+                                                <textarea name="text" id="content_shorthand" class="form-control" rows="6"></textarea>
+                                            </div>
                                         </div>
                                     </div>
-                                        <div class="col-sm-12" style="padding: 0;">
-                                            <textarea name="text" id="content_shorthand" class="form-control" rows="6"></textarea>
+                                </div>
+                                <div class="col-4">
+                                    <div class="main-card card ">
+                                        <div class="card-body">
+                                            <div class="row">
+                                                <div class="col-5 mb-2">
+                                                    <h5 class="card-title">Lịch sử gõ</h5>
+                                                </div>
+                                                <div class="col-7">
+                                                    
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-12" style="padding: 0;">
+                                                <textarea name="text" id="content_shorthand" class="form-control" rows="6"></textarea>
+                                            </div>
                                         </div>
-                                    </form>
+                                    </div>
                                 </div>
                             </div>
 
@@ -453,9 +472,47 @@
     </div>
     <script type="text/javascript" src="./../assets/scripts/keyboard.js"></script>
     <script>
+        $('#content_shorthand').keydown(function(e) {
+            if (e.keyCode == '84') {
+                checkCtrl = true
+            }
+        }).keyup(function(ev) {
+            if (ev.keyCode == '84') {
+                checkCtrl = false
+                document.getElementById('77').style.backgroundColor = "#333333";
+                document.getElementById('77_').style.backgroundColor = "#333333";
+            }
+        }).keydown(function(event) {
+            if (checkCtrl) {
+                if (event.keyCode == '77') {
+                    document.getElementById('77').style.backgroundColor = "#43E36F";
+                    document.getElementById('77_').style.backgroundColor = "#43E36F";
+                    // $("#go").append("ha ");
+                    document.getElementById("go").value += " ha";
+
+
+                    //ghi log
+                    var today = new Date();
+                    var date = today.getDate() + '/' + (today.getMonth() + 1) + '/' + today.getFullYear();
+                    var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
+
+                    var a;
+                    a = date + " " + time + " " + "HA";
+
+                    var node = document.createElement("LI");
+                    var textnode = document.createTextNode(a);
+                    node.appendChild(textnode);
+
+
+                    document.getElementById("log-press").appendChild(node);
+                    checkCtrl = false
+                }
+            }
+        });
+    </script>
+    <script>
         function copyClipboard() {
             var copyText = $("#content_shorthand").val();
-
             navigator.clipboard.writeText(copyText)
         }
     </script>
