@@ -312,7 +312,10 @@
                                                 </div>
                                             </div>
                                             <div class="col-sm-12" style="padding: 0;">
-                                                <textarea name="text" id="content_shorthand" class="form-control" rows="6"></textarea>
+                                                <div id="ma" style="width: 100%; height: 195px; border: 1px solid #D1D3E2; border-radius: 5px;" class="soan-thao soan-thao-log">
+                                                    <ul id="log">
+                                                    </ul>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
@@ -472,42 +475,13 @@
     </div>
     <script type="text/javascript" src="./../assets/scripts/keyboard.js"></script>
     <script>
-        $('#content_shorthand').keydown(function(e) {
-            if (e.keyCode == '84') {
-                checkCtrl = true
-            }
-        }).keyup(function(ev) {
-            if (ev.keyCode == '84') {
-                checkCtrl = false
-                document.getElementById('77').style.backgroundColor = "#333333";
-                document.getElementById('77_').style.backgroundColor = "#333333";
-            }
-        }).keydown(function(event) {
-            if (checkCtrl) {
-                if (event.keyCode == '77') {
-                    document.getElementById('77').style.backgroundColor = "#43E36F";
-                    document.getElementById('77_').style.backgroundColor = "#43E36F";
-                    // $("#go").append("ha ");
-                    document.getElementById("go").value += " ha";
+        document.addEventListener('DOMContentLoaded', () => {
+            'use strict';
 
-
-                    //ghi log
-                    var today = new Date();
-                    var date = today.getDate() + '/' + (today.getMonth() + 1) + '/' + today.getFullYear();
-                    var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
-
-                    var a;
-                    a = date + " " + time + " " + "HA";
-
-                    var node = document.createElement("LI");
-                    var textnode = document.createTextNode(a);
-                    node.appendChild(textnode);
-
-
-                    document.getElementById("log-press").appendChild(node);
-                    checkCtrl = false
-                }
-            }
+            document.addEventListener('keydown', event => {
+                const key = event.key.toLowerCase();
+                console.log(key);
+            });
         });
     </script>
     <script>
