@@ -1,6 +1,98 @@
 window.addEventListener('load', _ => {
     captureKeys();
 });
+//StopWatch
+function Stopwatch(elem) {
+    var time = 0;
+    var offset;
+    var interval;
+
+    function update() {
+        if (this.isOn) {
+            time += delta();
+        }
+        elem.textContent = timeFormatter(time);
+    }
+
+    function delta() {
+        var now = Date.now();
+        var timePassed = now - offset;
+
+        offset = now;
+
+        return timePassed;
+    }
+
+    function timeFormatter(time) {
+        time = new Date(time);
+
+        var minutes = time.getMinutes().toString();
+        var seconds = time.getSeconds().toString();
+        var milliseconds = time.getMilliseconds().toString();
+
+        if (minutes.length < 2) {
+            minutes = '0' + minutes;
+        }
+
+        if (seconds.length < 2) {
+            seconds = '0' + seconds;
+        }
+
+        while (milliseconds.length < 3) {
+            milliseconds = '0' + milliseconds;
+        }
+
+        var result = minutes + ' : ' + seconds + ' . ' + milliseconds;
+
+        return result;
+    }
+
+    this.start = function () {
+        console.log("start");
+        interval = setInterval(update.bind(this), 1);
+        offset = Date.now();
+        this.isOn = true;
+    };
+
+    this.stop = function () {
+        clearInterval(interval);
+        interval = null;
+        this.isOn = false;
+    };
+
+    this.isOn = false;
+}
+
+//Main
+var timer = document.querySelector('.timer');
+var toggleBtn = document.querySelector('.btn-go');
+
+var watch = new Stopwatch(timer);
+
+function start() {
+    toggleBtn.textContent = 'Stop';
+    toggleBtn.classList.toggle("on");
+    watch.start();
+}
+
+function stop() {
+    toggleBtn.textContent = 'Start';
+    toggleBtn.classList.toggle("on")
+    watch.stop();
+}
+
+function stopWhenOn() {
+    toggleBtn.textContent = 'Start';
+    toggleBtn.classList.toggle("on")
+    watch.stop();
+    watch.reset();
+}
+
+toggleBtn.addEventListener('click', function () {
+    watch.isOn ? stop() : start();
+}
+);
+
 
 function captureKeys() {
     window.addEventListener('keydown', e => {
@@ -762,6 +854,7 @@ var isEnable = false;
 
 
 
+
     //Phim Q
     var s = false;
     var t = false;
@@ -776,7 +869,9 @@ var isEnable = false;
 
         });
         $("#fullpage").keyup(function(event) {
+            start();
             if (event.keyCode === 81) {
+                console.log("let go");
                 $("#81").css("background-color", "#333333");
                 $("#81_").css("background-color", "#333333");
                 $("#request").text("Âm đầu: t");
@@ -1012,12 +1107,8 @@ var isEnable = false;
                                                                 document.getElementsByClassName("am-dau")[6].style.backgroundColor = "#1CC88A";
                                                                 $("#request").text("Bạn đã hoàn thành bài học!");
                                                                 $("#request").css("color", "#000");
-
+                                                                stop();
                                                                 $("#displayModalBtn").click();
-
-
-
-
                                                             }
 
 
