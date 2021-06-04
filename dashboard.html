@@ -153,6 +153,30 @@
                     </div>
                 </div>
             </div>
+        </div> 
+        <div class="modal fade" id="encourageModal" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">×</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="text-center">
+                            <h5 style="font-weight: bold;">Chào mừng bạn quay lại với hệ thống học gõ tốc ký</h5>
+                            <span>Tốc độ gõ hiện tại: 180 WPM</span><br>
+                            <span>Tỉ lệ gõ chính xác: 88%</span><br><br>
+                            <h6 style="font-weight: bold;">Xếp hạng của bạn trên hệ thống là <span style="color: red;">#5</span></h6>
+                            <h6 style="font-weight: bold;">Hãy cố gắng hơn nữa để đạt được 200 wpm</h6>
+                        </div>
+                    </div>
+                    <!-- <div class="modal-footer">
+                        <button onclick="window.location.href='learn_typing.html';" type="button" class="btn btn-primary">Học lại</button>
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    </div> -->
+                </div>
+            </div>
         </div>  
         <div class="app-main">
             <div class="app-sidebar sidebar-shadow">
@@ -313,7 +337,7 @@
                     </div>            
                     
                     <div class="row">
-                        <div class="col-md-8" style="flex:0 0 100%" >
+                        <div class="col-md-7" style="flex:0 0 100%" >
                             <div class="mb-3 card">
                                 <div class="card-header-tab card-header">
                                     <div class="card-header-title">
@@ -338,6 +362,157 @@
                                 </div>
                             </div>
                         </div>
+                        <div class="col-md-5">
+                            <div class="main-card mb-3 card">
+                                <div class="card-header">BXH
+                                    <div class="btn-actions-pane-right">
+                                        <div role="group" class="btn-group-sm btn-group">
+                                            <button class="active btn btn-focus">Tuần qua</button>
+                                            <button class="btn btn-focus">Toàn thời gian</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-body"  style="max-height: 400px; overflow-y: scroll;">
+                                    <div class="table-responsive" >
+                                        <table class="align-middle mb-0 table table-borderless table-striped table-hover">
+                                            <thead>
+                                                <tr>
+                                                    <th class="text-center">#</th>
+                                                    <th>User</th>
+                                                    <th class="text-center">WPM</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td class="text-center text-muted">#1</td>
+                                                    <td>
+                                                        <div class="widget-content p-0">
+                                                            <div class="widget-content-wrapper">
+                                                                <div class="widget-content-left mr-3">
+                                                                    <div class="widget-content-left">
+                                                                        <img width="40" class="rounded-circle" src="assets/images/avatars/4.jpg" alt="">
+                                                                    </div>
+                                                                </div>
+                                                                <div class="widget-content-left flex2">
+                                                                    <div class="widget-heading">John Doe</div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </td>
+                                                    <td class="text-center">
+                                                        WPM: 194<br>
+                                                        Tỉ lệ gõ chính xác: 96.8%
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="text-center text-muted">#2</td>
+                                                    <td>
+                                                        <div class="widget-content p-0">
+                                                            <div class="widget-content-wrapper">
+                                                                <div class="widget-content-left mr-3">
+                                                                    <div class="widget-content-left">
+                                                                        <img width="40" class="rounded-circle" src="assets/images/avatars/3.jpg" alt="">
+                                                                    </div>
+                                                                </div>
+                                                                <div class="widget-content-left flex2">
+                                                                    <div class="widget-heading">Ruben Tillman</div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </td>
+                                                    <td class="text-center">
+                                                        WPM: 169<br>
+                                                        Tỉ lệ gõ chính xác: 94.2%
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="text-center text-muted">#3</td>
+                                                    <td>
+                                                        <div class="widget-content p-0">
+                                                            <div class="widget-content-wrapper">
+                                                                <div class="widget-content-left mr-3">
+                                                                    <div class="widget-content-left">
+                                                                        <img width="40" class="rounded-circle" src="assets/images/avatars/2.jpg" alt="">
+                                                                    </div>
+                                                                </div>
+                                                                <div class="widget-content-left flex2">
+                                                                    <div class="widget-heading">Elliot Huber</div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </td>
+                                                    <td class="text-center">
+                                                        WPM: 160<br>
+                                                        Tỉ lệ gõ chính xác: 93.2%
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="text-center text-muted">#4</td>
+                                                    <td>
+                                                        <div class="widget-content p-0">
+                                                            <div class="widget-content-wrapper">
+                                                                <div class="widget-content-left mr-3">
+                                                                    <div class="widget-content-left">
+                                                                        <img width="40" class="rounded-circle" src="assets/images/avatars/1.jpg" alt=""></div>
+                                                                </div>
+                                                                <div class="widget-content-left flex2">
+                                                                    <div class="widget-heading">Vinnie Wagstaff</div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </td>
+                                                    <td class="text-center">
+                                                        WPM: 170<br>
+                                                        Tỉ lệ gõ chính xác: 91.2%
+                                                    </td>
+                                                </tr>
+                                                <tr style="background-color: #1cc88a;">
+                                                    <td class="text-center text-muted">#5</td>
+                                                    <td>
+                                                        <div class="widget-content p-0">
+                                                            <div class="widget-content-wrapper">
+                                                                <div class="widget-content-left mr-3">
+                                                                    <div class="widget-content-left">
+                                                                        <img width="40" class="rounded-circle" src="assets/images/avatars/2.jpg" alt=""></div>
+                                                                </div>
+                                                                <div class="widget-content-left flex2">
+                                                                    <div class="widget-heading">User01</div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </td>
+                                                    <td class="text-center">
+                                                        WPM: 180<br>
+                                                        Tỉ lệ gõ chính xác: 88%
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="text-center text-muted">#6</td>
+                                                    <td>
+                                                        <div class="widget-content p-0">
+                                                            <div class="widget-content-wrapper">
+                                                                <div class="widget-content-left mr-3">
+                                                                    <div class="widget-content-left">
+                                                                        <img width="40" class="rounded-circle" src="assets/images/avatars/1.jpg" alt=""></div>
+                                                                </div>
+                                                                <div class="widget-content-left flex2">
+                                                                    <div class="widget-heading">Vinnie Wagstaff</div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </td>
+                                                    <td class="text-center">
+                                                        WPM: 185<br>
+                                                        Tỉ lệ gõ chính xác: 72%
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                         <div class="col-md-4" style="flex:0 0 100%" >
                             <div class="mb-3 card">
                                 <div class="card-header-tab card-header">
@@ -357,14 +532,12 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-12">
+                        <div class="col-md-8">
                             <div class="main-card mb-3 card">
                                 <div class="card-header">Lộ trình học
                                 </div>
                                 <div class="card-body row">
-                                    <div class="col-lg-4 mb-4">
+                                    <div class="col-lg-6 mb-4">
                                         <div class="card bg-success text-white shadow ">
                                             <div class="card-body ">
                                                 <div style="display: flex; justify-content: space-between; align-items: center; ">
@@ -382,7 +555,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="col-lg-4 mb-4">
+                                    <div class="col-lg-6 mb-4">
                                         <div class="card bg-success text-white shadow ">
                                             <div class="card-body ">
                                                 <div style="display: flex; justify-content: space-between; align-items: center; ">
@@ -400,7 +573,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="col-lg-4 mb-4">
+                                    <div class="col-lg-6 mb-4">
                                         <div class="card bg-success text-white shadow ">
                                             <div class="card-body ">
                                                 <div style="display: flex; justify-content: space-between; align-items: center; ">
@@ -418,7 +591,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="col-lg-4 mb-4">
+                                    <div class="col-lg-6 mb-4">
                                         <div class="card bg-success text-white shadow ">
                                             <div class="card-body ">
                                                 <div style="display: flex; justify-content: space-between; align-items: center; ">
@@ -436,7 +609,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="col-lg-4 mb-4">
+                                    <div class="col-lg-6 mb-4">
                                         <div class="card bg-success text-white shadow ">
                                             <div class="card-body ">
                                                 <div style="display: flex; justify-content: space-between; align-items: center; ">
@@ -608,5 +781,14 @@
             </div>
         </div>
     </div>
-<script type="text/javascript" src="./assets/scripts/main.js"></script></body>
+<script type="text/javascript" src="./assets/scripts/main.js"></script>
+<script src="./assets/scripts/jquery.min.js"></script>
+<script src="./assets/scripts/bootstrap.bundle.min.js"></script>
+<script>
+    $(document).ready(function(){
+        $('#encourageModal').modal('show')
+        console.log("DD")
+    });
+</script>
+</body>
 </html>
