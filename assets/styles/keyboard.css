@@ -248,7 +248,7 @@
 }
 
 #backBtn {
-    width: 175px;
+    width: 100px;
     height: 40px;
     text-align: center;
     background: #FFBD69;
@@ -263,4 +263,9 @@
     line-height: 22px;
     text-align: center;
     color: #FFFFFF;
+}
+
+#backIcon {
+    color: #FFFFFF;
+    margin-right: 5px;
 }
