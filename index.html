@@ -1,112 +1,129 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-	<title>HCI-04 Demo Prototype</title>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-<!--===============================================================================================-->	
-	<link rel="icon" type="image/png" href="./images/icons/favicon.ico"/>
-<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="./login/vendor/bootstrap/css/bootstrap.min.css">
-<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="./login/fonts/font-awesome-4.7.0/css/font-awesome.min.css">
-<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="./login/fonts/Linearicons-Free-v1.0.0/icon-font.min.css">
-<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="./login/vendor/animate/animate.css">
-<!--===============================================================================================-->	
-	<link rel="stylesheet" type="text/css" href="./login/vendor/css-hamburgers/hamburgers.min.css">
-<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="./login/vendor/animsition/css/animsition.min.css">
-<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="./login/vendor/select2/select2.min.css">
-<!--===============================================================================================-->	
-	<link rel="stylesheet" type="text/css" href="./login/vendor/daterangepicker/daterangepicker.css">
-<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="./login/css/util.css">
-	<link rel="stylesheet" type="text/css" href="./login/css/main.css">
-<!--===============================================================================================-->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>10FastFingers.com - Typing Test, Competitions, Practice &amp; Typing Games</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="10FastFingers - Improve your Typing Speed with our Typing Games">
+    <meta name="keywords" content="typing test, typing competition, touchtyping, touch typing, typing speed">
+    <meta name="viewport" content="initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css" type="text/css" media="screen, projection">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="assets/styles/index/css" rel="stylesheet">
+
+</script>
+    
+    <link rel="stylesheet" type="text/css" href="assets/styles/index/style.css">
+    <link rel="canonical" href="https://10fastfingers.com/">
+
 </head>
-<body style="background-color: #666666;">
-	
-	<div class="limiter">
-		<div class="container-login100">
-			<div class="wrap-login100">
-				<div class="login100-form ">
-					<span class="login100-form-title p-b-43">
-						Login to continue
-					</span>
-					
-					
-					<div class="wrap-input100 validate-input" data-validate = "Valid email is required: ex@abc.xyz">
-						<input class="input100" type="text" name="email">
-						<span class="focus-input100"></span>
-						<span class="label-input100">Email</span>
-					</div>
-					
-					
-					<div class="wrap-input100 validate-input" data-validate="Password is required">
-						<input class="input100" type="password" name="pass">
-						<span class="focus-input100"></span>
-						<span class="label-input100">Password</span>
-					</div>
+<body id="homepage">
 
-					<div class="flex-sb-m w-full p-t-3 p-b-32">
-						<div class="contact100-form-checkbox">
-							<input class="input-checkbox100" id="ckb1" type="checkbox" name="remember-me">
-							<label class="label-checkbox100" for="ckb1">
-								Remember me
-							</label>
-						</div>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-xs-2 col-sm-1 col-md-2" id="sidebar">
+            <img src="assets/images/keyboard.png" id="logo-sidebar" class="hidden-xs hidden-sm" alt="Typing Test">
+            <a id="language" class="hidden-xs hidden-sm">
+                Ngôn ngữ: <strong>Tiếng Việt</strong>
+                <i class="fa fa-caret-down" aria-hidden="true"></i>
+            </a>
 
-						<div>
-							<a href="#" class="txt1">
-								Forgot Password?
-							</a>
-						</div>
-					</div>
-			
+            <div class="list-group">
+                <a href="./login.html" class="list-group-item " mode="speedtest">
+                    <div class="inside-box hidden-xs hidden-sm visible-md visible-lg">
+                        <i class="fa fa-play"></i>&nbsp; <strong>Học gõ</strong>
+                        <small>Bắt đầu khám phá hành trình đầy lý thú</small>
+                    </div>
+                    <i class="fa fa-play large-alt-icon visible-xs visible-sm hidden-md hidden-lg"></i>
+                </a>
 
-					<div class="container-login100-form-btn">
-						<button class="login100-form-btn" onclick="window.location.href='./dashboard.html'">
-							<a style="color: white;"><b>Login</b></a>
-						</button>
-					</div>
-					
-					<div class="text-center p-t-46 p-b-20">
-						<span class="txt2">
-							<a href="./login/signup.html">or sign up using</a>
-						</span>
-					</div>
+                <a href="./login.html" class="list-group-item " mode="advanced-speedtest">
+                    <div class="inside-box hidden-xs hidden-sm visible-md visible-lg">
+                        <i class="fa fa-forward"></i>&nbsp; <strong>Luyện gõ</strong>
+                        <small>Luyện gõ qua các trò chơi nổi tiếng</small>
+                    </div>
+                    <i class="fa fa-forward large-alt-icon visible-xs visible-sm hidden-md hidden-lg"></i>
+                </a>
 
-				</div>
+                <a href="./login.html" class="list-group-item " mode="custom">
+                    <div class="inside-box hidden-xs hidden-sm visible-md visible-lg">
+                        <i class="fa fa-cogs"></i>&nbsp; <strong>Tùy biến bộ gõ</strong>
+                        <small>&nbsp;Tạo bộ gõ của riêng bạn!</small>
+                    </div>
+                    <i class="fa fa-forward large-alt-icon visible-xs visible-sm hidden-md hidden-lg"></i>
+                </a>
 
-				<div class="login100-more" style="background-image: url('./images/bg-01.jpg');">
-				</div>
-			</div>
-		</div>
-	</div>
-	
-	
+                <a href="./login.html" class="list-group-item " mode="competition">
+                    <div class="inside-box hidden-xs hidden-sm visible-md visible-lg">
+                        <i class="fa fa-trophy"></i>&nbsp; <strong>Thi đấu</strong>
+                        <small>Ai có thể nhanh hơn bạn?</small>
+                    </div>
+                    <i class="fa fa-trophy large-alt-icon visible-xs visible-sm hidden-md hidden-lg"></i>
+                </a>
 
-	
-	
-<!--===============================================================================================-->
-	<script src="./login/vendor/jquery/jquery-3.2.1.min.js"></script>
-<!--===============================================================================================-->
-	<script src="./login/vendor/animsition/js/animsition.min.js"></script>
-<!--===============================================================================================-->
-	<script src="./login/vendor/bootstrap/js/popper.js"></script>
-	<script src="./login/vendor/bootstrap/js/bootstrap.min.js"></script>
-<!--===============================================================================================-->
-	<script src="./login/vendor/select2/select2.min.js"></script>
-<!--===============================================================================================-->
-	<script src="./login/vendor/daterangepicker/moment.min.js"></script>
-	<script src="./login/vendor/daterangepicker/daterangepicker.js"></script>
-<!--===============================================================================================-->
-	<script src="./login/vendor/countdowntime/countdowntime.js"></script>
-<!--===============================================================================================-->
-	<script src="./login/main.js"></script>
+                <a href="./login.html" class="list-group-item " mode="text-practice">
+                    <div class="inside-box hidden-xs hidden-sm visible-md visible-lg">
+                        <i class="fa fa-file-text-o"></i>&nbsp; <strong>Soạn thảo văn bản</strong>
+                        <small>Tạo văn bản của riêng bạn</small>
+                    </div>
+                    <i class="fa fa-file-text-o large-alt-icon visible-xs visible-sm hidden-md hidden-lg"></i>
+                </a>
 
-</body>
+                <a href="./login.html" class="list-group-item " mode="practice">
+                    <div class="inside-box hidden-xs hidden-sm visible-md visible-lg">
+                        <i class="fa fa-signal"></i>&nbsp; <strong>Thành tích</strong>
+                        <small>&nbsp;Thử thách bản thân!</small>
+                    </div>
+                    <i class="fa fa-signal large-alt-icon visible-xs visible-sm hidden-md hidden-lg"></i>
+                </a>
+            </div>
+
+            <a href="./login.html" id="login-register" class="hidden-xs hidden-sm">
+                <span>Đăng nhập &nbsp;|&nbsp;  Đăng ký</span>
+                <i class="fa fa-caret-down" aria-hidden="true"></i>
+            </a>
+
+        </div>
+        <div class="col-xs-10 col-sm-11 col-md-8" id="main">
+
+            <div id="centerbox">
+                <img src="assets/images/keyboard.png" id="main-logo" alt="Typing Test">
+                <hr style="margin-bottom:-7px;">
+                <h1 id="main-message">Học &amp; và tăng tốc độ gõ của bạn với<br> bàn phím Việt Steno</h1>
+                <hr style="margin-top:25px; margin-bottom: 40px;">
+                <a href="./login.html" class="cta_button" id="typing-test">BẮT ĐẦU HỌC NGAY<span class="separator"></span> <i class="fa fa-play fa-lg"></i></a>
+                <a href="./login.html" class="cta_button" id="typing-competition">THÍCH THỬ THÁCH?<span class="separator" style="background: #fdc543;"></span> <i class="fa fa-trophy fa-lg"></i></a>
+            </div>
+
+            <div class="row" id="content">
+                <div class="col-xs-12 col-sm-12 col-md-6 col-md-offset-3">
+                    <h2><a href="./login.html">Học gõ steno</a></h2>
+                    <p>Nếu bạn muốn có cải thiện nhanh chóng  tốc độ đánh máy của mình, hãy thử học sử dụng bàn phím stenographẻr. Bạn có thể nhanh chóng nhận ra bạn có thể nhập nhanh như thế nào so với sử dụng bàn phím truyền thống.</p>
+                    <p>Một lợi ích dễ nhận thấy: Bạn càng luyện tập nhiều các trò chơi đánh máy, bạn càng có thể gõ nhanh hơn vì bài kiểm tra đánh máy sử dụng các từ phổ biến nhất. Nếu bạn có thể gõ những từ thường xuyên nhất nhanh hơn, bạn cũng sẽ có thể gõ mọi thứ khác nhanh hơn!</p>
+                </div>
+                <div class="col-xs-12 col-sm-12 col-md-6 col-md-offset-3">
+                    <h2><a href="./login.html">Xếp hạng</a></h2>
+                    <p>Sẵn sàng cạnh tranh với người khác? Các bài học và luyện tập đều có một bảng xếp hạng. Qua đó, bạn có thể thấy các chỉ số đánh máy của bản thân cũng như vị trí của bản thân trên bảng xếp hạng. Nhờ đó, bạn có thể thấy được thiếu sót và cải thiện. Chúng tôi cũng luôn có các nhắc nhở cũng như gợi ý để  bạn có thể cải thiện tốc độ đánh máy một cách nhanh chóng nhất có thể.</p>
+                </div>
+                <div class="col-xs-12 col-sm-12 col-md-6 col-md-offset-3">
+                    <h2><a href="./login.html">Soạn thảo văn bản</a></h2>
+                    <p>Bạn có thể thử ngay những gì đã học ở trong chế độ soạn thảo văn bản của chúng tôi. Với bàn phím ảo, bạn có thể dễ dàng nhận biết các ký tự cần gõ. Bên cạnh đó, bạn có thể dễ dàng sao chép, chia sẻ văn bản vừa được tạo ra với bạn bè chỉ với vài thao tác. Thật dễ dàng phải không nào ?</p>
+                </div>
+                <div class="col-xs-12 col-sm-12 col-md-6 col-md-offset-3">
+                    <h2><a href="./login.html">Từ điển</a></h2>
+                    <p>Mệt mỏi vì tốc ký có quá nhiều quy tắc không thể nhớ hết được. Hoặc bạn là người mới làm quen với tốc ký và chưa biết nhiều tổ hợp gõ. Đừng lo, chúng tôi đã tích hợp một từ điển tốc ký vào trang web để bạn có thể dễ dàng tra cứu. Gõ tốc ký giờ đây dễ dàng hơn bao giờ hết.</p>
+                </div>
+
+            </div>
+
+            <div id="footer">
+                <a >HCI04</a> &nbsp;|&nbsp; <a>UI/UX</a>
+            </div>
+
+        </div>
+        <div class="hidden-xs hidden-sm col-md-2" id="rightbar"></div>
+    </div>
+</div>
+
 </html>
