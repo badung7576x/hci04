@@ -23,8 +23,14 @@
 <link href="../assets/styles/main.css" rel="stylesheet">
 <link href="../assets/styles/keyboard.css" rel="stylesheet">
 
+<!-- CDN for keyboard support -->
+<script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js" integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<!-- End here -->
+
 <script type="text/javascript" src="./../assets/scripts/main.js"></script>
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<!-- <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> -->
 </head>
 <body>
     <div class="app-container app-theme-white body-tabs-shadow fixed-sidebar fixed-header">
@@ -295,7 +301,9 @@
                                                 </div>
                                             </div>
                                             <div class="col-sm-12" style="padding: 0;">
-                                                <textarea name="text" id="content_shorthand" class="form-control" rows="6"></textarea>
+                                                <div class="row shorthand" id="shorthand">
+                                                    <textarea name="text" id="output" class="form-control z-depth-1" rows="6" wrap="on" style="overflow-y: scroll"></textarea>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
@@ -313,8 +321,8 @@
                                             </div>
                                             <div class="col-sm-12" style="padding: 0;">
                                                 <div id="ma" style="width: 100%; height: 195px; border: 1px solid #D1D3E2; border-radius: 5px;" class="soan-thao soan-thao-log">
-                                                    <ul id="log">
-                                                    </ul>
+                                                    <textarea rows="10" wrap="off" id="verticalNotes" style="width: 100%; height: 100%;"> 
+                                                    </textarea>
                                                 </div>
                                             </div>
                                         </div>
@@ -474,6 +482,23 @@
         </div>
     </div>
     <script type="text/javascript" src="./../assets/scripts/keyboard.js"></script>
+
+    <!-- data path for json file -->
+    <div id="input-person" data-path="Li8uLi9hc3NldHMvanNvbi9kaWN0Lmpzb24="></div>
+    <div id="keyCodeToSteno" data-path="Li8uLi9hc3NldHMvanNvbi9rZXlDb2RlVG9TdGVuby5qc29u"></div>
+    <div id="binaryToSteno" data-path="Li8uLi9hc3NldHMvanNvbi9iaW5hcnlUb1N0ZW5vLmpzb24="></div>
+    <div id="keyCodeToStenoNumber" data-path="Li8uLi9hc3NldHMvanNvbi9rZXlDb2RlVG9TdGVub051bWJlci5qc29u"></div>
+    <div id="keyCodeToQwerty" data-path="Li8uLi9hc3NldHMvanNvbi9rZXlDb2RlVG9Rd2VydHkuanNvbg=="></div>
+
+    <!-- Bootstrap tether Core JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+    <!-- keyboard logic || mapping standard keyboard to steno keyboard -->
+    <script src="./../assets/scripts/jquery.slimscroll.js"></script>
+    <script src="./../assets/scripts/jquery.base64.js"></script>
+    <script src="./../assets/scripts/overwriteMode.js"></script>
+    <script src="./../assets/scripts/ploverdemo_editor.js"></script>
+
     <script>
         document.addEventListener('DOMContentLoaded', () => {
             'use strict';
@@ -486,7 +511,7 @@
     </script>
     <script>
         function copyClipboard() {
-            var copyText = $("#content_shorthand").val();
+            var copyText = $("#output").val();
             navigator.clipboard.writeText(copyText)
         }
     </script>
