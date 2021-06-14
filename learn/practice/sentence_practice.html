@@ -458,7 +458,7 @@
                             </div>
                         </div>
                         <!-- Modal here -->
-                        <div class="modal fade show" id="modalFinishLearn" aria-modal="true" role="dialog" style="display: none;">
+                        <div class="modal fade show" id="modalFinishLearn" aria-modal="true" role="dialog" style="display: none">
                             <div class="modal-dialog modal-dialog-centered modal-md shadow-none" style="">
                                 <div class="modal-content">
                                     <div style="margin-bottom: -0.5rem!important;" class="card shadow mb-4 border-top-primary">
@@ -505,7 +505,7 @@
                                     <!-- Modal footer -->
                                     <div class="modal-footer">
                                         <button onclick="location.reload()" type="button" class="btn btn-primary">Luyện tập lại</button> <!-- reload -->
-                                        <button type="button" class="btn btn-secondary" id="nextBtn">Kết thúc luyện tập</button>
+                                        <button onclick="document.getElementById('modalFinishLearn').style.display = 'none'" type="button" class="btn btn-secondary" id="nextBtn">Kết thúc luyện tập</button>
                                         <!-- <button type="button" class="btn btn-secondary" id="closeBtn" data-dismiss="modal">Close</button> -->
                                     </div>
                     
@@ -550,10 +550,21 @@
 <!-- Bootstrap tether Core JavaScript -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 
+<!-- script for timer -->
+<script src="sentence_practice.js"></script>
 <!-- script for handling sentence typing highlight -->
 <script>
     let dictList = [];
     dictList.push("không", "có", "tiền", "thì", "cạp", "đất", "mà", "ăn");
+
+    var timer = document.querySelector('.timer');
+
+    var watch = new Stopwatch(timer);
+
+    window.addEventListener('keydown', function() {
+        watch.start();
+    });
+
     $("#fullpage").keyup(function(){
         $("#fullpage").ready(function() {
             var typedWord = $("#output").val().trim();
@@ -565,11 +576,9 @@
                     document.getElementsByClassName("am-dau")[i].style.backgroundColor = "#D1D3E2";
                     break;
                 }
-                if(i == dictList.length - 1) {$("#modalFinishLearn").style.display = "show"};
+                if(i == dictList.length - 1) {document.getElementById('modalFinishLearn').style.display = 'block'; watch.stop()};
             }
         });
     });
-    
-
 </script>
 </html>
